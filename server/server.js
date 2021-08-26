@@ -19,6 +19,7 @@ app.use(express.static('build'));
 // Routes
 app.use('/api/favorite', favoriteRouter);
 app.use('/api/category', categoryRouter);
+app.use('/api/giph', giphRouter)
 
 // Listen
 app.listen(PORT, () => {
