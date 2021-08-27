@@ -11,6 +11,7 @@ function GiphList() {
         <h1>GOT HERE YO</h1>
         <ul>
             {giphList.data?.map((search, index) => {
+                     //   ^--- ? means stop if array is empty, if not go through the map loop
                 return (
                     <ListItem 
                         key={index}
