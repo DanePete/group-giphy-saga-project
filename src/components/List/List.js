@@ -1,8 +1,9 @@
 import { useEffect } from 'react';
 import {useDispatch, useSelector} from 'react-redux'
+import ListItem from '../ListItem/ListItem'
 
 function SearchList() {
-    const searchList = useSelector(store => store.searchList);
+    const searchList = useSelector(store => store.giphList);
     const dispatch = useDispatch();
 
 let exampleData = [{url:"https://giphy.com/gifs/cheeseburger-burger-king-food-sEjcayPGhu1Xi", title:"burger1"}, 
@@ -12,9 +13,9 @@ let exampleData = [{url:"https://giphy.com/gifs/cheeseburger-burger-king-food-sE
 
 return (
     <ul>
-        {searchList.map((search, index) => 
-          <li key={index}>{search.search_query}</li> 
-        )}
+        {searchList.map((search, index) => (
+          <ListItem key={index} search={search}/> 
+        ))}
     </ul>
 
     
