@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import GiphList from '../GiphList/GiphList';
 
 const SearchForm = () => {
     const dispatch = useDispatch();
@@ -23,6 +24,7 @@ const SearchForm = () => {
     };
 
     return (
+        <>
         <form onSubmit={handleSubmit} className="add-search-form">
             <input
                 required
@@ -38,6 +40,8 @@ const SearchForm = () => {
           Search
         </button>
         </form>
+        <GiphList />
+        </>
     )
 }
 export default SearchForm; 
