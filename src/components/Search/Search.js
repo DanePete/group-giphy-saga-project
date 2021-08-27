@@ -4,14 +4,12 @@ import GiphList from '../GiphList/GiphList';
 
 const SearchForm = () => {
     const dispatch = useDispatch();
-    const [newSearch, setNewSearch] = useState({
-        search_query: ''
-    })
+    const [newSearch, setNewSearch] = useState('')
 
     const handleSubmit = event => {
         event.preventDefault();
         console.log('got here?!');
-        console.log('Add new search', newSearch);
+        console.log('Add new search', newSearch.search_query);
 
         setNewSearch({
             search_query: ''
@@ -30,10 +28,10 @@ const SearchForm = () => {
                 required
                 placeholder="Search for Something"
                 value={newSearch.search_query}
-                onChange={(event) => setNewSearch({
-                    ...newSearch,
-                    search_query: event.target.value
-                })}
+                onChange={(event) => setNewSearch(
+                    // ...newSearch,
+                    event.target.value
+                )}
             />
         {/* <input type="submit" value="search" /> */}
         <button type="submit">

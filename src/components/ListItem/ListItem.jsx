@@ -1,12 +1,12 @@
 import React from 'react';
-import { search } from '../../../server/routes/favorite.router';
-
 
 const ListItem = ({search}) => {
-
+    console.log('serach url', search);
     return (
         <li>
-            <img src={search.url} alt={search.title}/>
+            <img src={search.images.original.url} alt={search.title}/>
         </li> 
     )
 }
+
+export default ListItem;
