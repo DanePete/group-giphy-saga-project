@@ -5,6 +5,7 @@ const router = express.Router();
 
 router.get('/search/:string', (req, res) => {
   // return all categories
+  console.log('our key',process.env.GIPHY_API_KEY);
  axios({
      method: 'GET',
      url: "https://api.giphy.com/v1/gifs/search",

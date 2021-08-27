@@ -9,6 +9,7 @@ const SearchForm = () => {
 
     const handleSubmit = event => {
         event.preventDefault();
+        console.log('got here?!');
         console.log('Add new search', newSearch);
 
         setNewSearch({
@@ -22,7 +23,7 @@ const SearchForm = () => {
     };
 
     return (
-        <form on Submit={handleSubmit} className="add-search-form">
+        <form onSubmit={handleSubmit} className="add-search-form">
             <input
                 required
                 placeholder="Search for Something"
@@ -32,8 +33,9 @@ const SearchForm = () => {
                     search_query: event.target.value
                 })}
             />
+        {/* <input type="submit" value="search" /> */}
         <button type="submit">
-            Search
+          Search
         </button>
         </form>
     )
